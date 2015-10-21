@@ -1,0 +1,21 @@
+{% extends "_base.html" %}
+
+{% block body %}
+
+<div class="container">
+
+  <div class="row" style="padding: 15px">
+
+    <div class="content">
+      {% block content %}
+        {{this.body}}
+      {% endblock %}
+    </div>
+
+  </div>
+
+  {% include 'footer.html' %}
+
+</div>
+
+{% endblock %}

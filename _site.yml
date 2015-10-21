@@ -1,4 +1,4 @@
-brand: Urubu Tpl
+brand: CLC 2015 - Continuous Delivery & Infrastructure as Code
 
 bootswatch: null # flatly, yeti, lumen,...
 navbar_inverse: false
@@ -6,33 +6,44 @@ bootstrap: 3.3.5
 navbar_right_items: 2
 
 reflinks:
-    urubu:
-        url: http://urubu.jandecaluwe.com
-        title: Urubu
-    urubu_manual:
-        url: http://urubu.jandecaluwe.com/manual
-        title: Urubu Manual
-    urubu_quickstart_site:
-        url: http://urubu-quickstart.jandecaluwe.com
-        title: Urubu Quickstart site
-    jandecaluwe:
-        url: http://www.jandecaluwe.com
-        title: Jan Decaluwe
-    content_license:
-        url: http://creativecommons.org/licenses/by-sa/3.0/
-        title: CC-BY-SA License
-    software_license:
-        url: http://www.gnu.org/licenses/agpl-3.0.txt
-        title: GNU Affero General Public License
-    markdown:
-        url: http://daringfireball.net/projects/markdown/
-        title: Markdown
-    jinja2:
-        url: http://jinja.pocoo.org
-        title: Jinja2
-    bootstrap:
-        url: http://getbootstrap.com
-        title: Bootstrap
-    bootswatch:
-        url: http://bootswatch.com
-        title: Bootswatch
+    phonebook:
+        url: http://www.pingworks.de
+        title: phonebook
+    example_deployed:
+      url: http://test.com
+      title: Phonebook WebApp
+    example_sourcecode:
+      url: http://test.com
+      title: Sourcecode
+    example_script_install:
+      url: http://test.com
+      title: Installer
+    example_script_build:
+      url: http://test.com
+      title: Build Script
+    example_script_unittest:
+      url: http://test.com
+      title: Unittest Script
+    central_scm:
+      url: http://test.com
+      title: Central Sourcecode Repository
+    central_scm_hookscript:
+      url: http://test.com
+      title: Git Hook Script
+
+    commit_stage:
+      url: http://test.com
+      title: Commitstage
+
+    binary_repo:
+      url: http://test.com
+      title: Binary Repo
+    binary_repo_create:
+      url: http://test.com
+      title: Create New Folderstructure
+    binary_repo_package:
+      url: http://test.com
+      title: Package
+    binary_repo_upload:
+      url: http://test.com
+      title: Upload
