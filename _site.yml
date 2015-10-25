@@ -1,5 +1,6 @@
 brand: CLC 2015 - Continuous Delivery & Infrastructure as Code
 
+baseurl: __user__
 bootswatch: null # flatly, yeti, lumen,...
 navbar_inverse: false
 bootstrap: 3.3.5
