@@ -48,3 +48,17 @@ reflinks:
     binary_repo_upload:
       url: http://test.com
       title: Upload
+
+    acceptance_test_stage:
+      url: http://test.com
+      title: Acceptance Test Stage
+    deploy_scipt:
+      url: http://test.com
+      title: Deployment Script
+    test_env:
+      url: http://test.com
+      title: Test Environment
+
+    dash:
+      url: http://test.com
+      title: Dashboard
