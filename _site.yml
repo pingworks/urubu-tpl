@@ -1,4 +1,4 @@
-brand: CLC 2015 - Continuous Delivery & Infrastructure as Code
+brand: AgileTD 2015 - Continuous Delivery & Infrastructure as Code
 
 baseurl: __user__
 bootswatch: null # flatly, yeti, lumen,...
@@ -7,6 +7,13 @@ bootstrap: 3.3.5
 navbar_right_items: 2
 
 reflinks:
+    phonebook_demo:
+        url: http://frontend.demo.ws.net:9292
+        title: Phonebook example app
+    dashboard:
+      url: http://dash.__user__.ws.net/
+      title: Pipeline Dashboard
+
     phonebook:
         url: http://www.pingworks.de
         title: phonebook
