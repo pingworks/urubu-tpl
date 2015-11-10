@@ -14,29 +14,27 @@ reflinks:
       url: http://dash.__user__.ws.net/
       title: Pipeline Dashboard
 
-    phonebook:
-        url: http://www.pingworks.de
-        title: phonebook
     example_deployed:
-      url: http://test.com
+      url: http://frontend.demo.ws.net:9292/
       title: Phonebook WebApp
     example_sourcecode:
-      url: http://test.com
+      url: https://github.com/pingworks/phonebook
       title: Sourcecode
     example_script_install:
-      url: http://test.com
+      url: https://github.com/pingworks/phonebook/blob/master/install.sh
       title: Installer
     example_script_build:
-      url: http://test.com
+      url: https://github.com/pingworks/phonebook/blob/master/build.sh
       title: Build Script
     example_script_unittest:
-      url: http://test.com
+      url: https://github.com/pingworks/phonebook/blob/master/unittest.sh
       title: Unittest Script
+
     central_scm:
-      url: http://test.com
+      url: http://git.__user__.ws.net
       title: Central Sourcecode Repository
     central_scm_hookscript:
-      url: http://test.com
+      url: https://github.com/pingworks/chef-pw_git_repo/blob/master/templates/default/post-receive-hook.erb
       title: Git Hook Script
 
     commit_stage:
