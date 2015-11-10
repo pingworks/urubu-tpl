@@ -69,3 +69,15 @@ reflinks:
     dash:
       url: http://test.com
       title: Dashboard
+
+    serverspec_doc:
+      url: http://serverspec.org/resource_types.html
+      title: Serverspec Resource Types
+
+    chef_doc:
+      url: https://docs.chef.io/
+      title: Chef Documentation
+
+    atom_serverspec:
+      url: https://atom.io/packages/serverspec-snippets
+      title: Atom Serverspec Snippets

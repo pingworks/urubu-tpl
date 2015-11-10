@@ -12,6 +12,7 @@ layout: colpage
 pager: false
 content:
   - index
+  - cd
 ---
 Continuous Delivery
 {.lead}
@@ -22,3 +23,9 @@ Continuous Delivery
 
 Infrastructure as Code
 {.lead}
+
+[Chef Documentation][chef_doc]{: .btn .btn-xs .btn-default role=button }
+
+[Serverspec Resourcetypes][serverspec_doc]{: .btn .btn-xs .btn-default role=button }
+
+[Atom Serverspec Snippets][atom_serverspec]{: .btn .btn-xs .btn-default role=button }

@@ -7,11 +7,9 @@ user_email: __user_email__
 wsappl_name: __wsappl_name__
 wsappl_doc_version: __wsappl_doc_version__
 
-title: Links
+title: CD
 layout: colpage
 pager: false
-content:
-  - index
 ---
 Part 1 - Continuous Delivery
 {.lead}
