@@ -12,7 +12,7 @@ layout: colpage
 pager: false
 content:
   - index
-  - cd
+
 ---
 Continuous Delivery
 {.lead}

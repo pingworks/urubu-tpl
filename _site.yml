@@ -8,7 +8,7 @@ navbar_right_items: 2
 
 reflinks:
     phonebook_demo:
-        url: http://frontend.demo.ws.net:9292
+        url: http://frontend.test01.demo.ws.net:9292
         title: Phonebook example app
     dashboard:
       url: http://dash.__user__.ws.net/
