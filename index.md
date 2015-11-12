@@ -29,3 +29,8 @@ Infrastructure as Code
 [Serverspec Resourcetypes][serverspec_doc]{: .btn .btn-xs .btn-default role=button }
 
 [Atom Serverspec Snippets][atom_serverspec]{: .btn .btn-xs .btn-default role=button }
+
+Code Examples
+{.lead}
+
+Example [redis.conf][example_redis_conf]

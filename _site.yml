@@ -81,3 +81,7 @@ reflinks:
     atom_serverspec:
       url: https://atom.io/packages/serverspec-snippets
       title: Atom Serverspec Snippets
+
+    example_redis_conf:
+      url: https://github.com/pingworks/ws-examples/blob/master/ws-examples/iac/redis.conf
+      title: redis.conf
