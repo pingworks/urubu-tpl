@@ -31,42 +31,54 @@ reflinks:
       title: Unittest Script
 
     central_scm:
-      url: http://git.__user__.ws.net
+      url: http://git.local/gitweb/
       title: Central Sourcecode Repository
     central_scm_hookscript:
       url: https://github.com/pingworks/chef-pw_git_repo/blob/master/templates/default/post-receive-hook.erb
       title: Git Hook Script
+    git_hook_docu:
+      url: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+      title: Documentation on git hook scripts
 
     commit_stage:
-      url: http://test.com
+      url: http://jkmaster.local/jenkins/jobs/1-phonebook-commit-stage
       title: Commitstage
 
     binary_repo:
-      url: http://test.com
+      url: http://repo.local/repo/
       title: Binary Repo
     binary_repo_create:
-      url: http://test.com
+      url: https://github.com/pingworks/dash/blob/master/scripts/repo/start_pipeline_build.sh
       title: Create New Folderstructure
-    binary_repo_package:
-      url: http://test.com
-      title: Package
     binary_repo_upload:
-      url: http://test.com
+      url: https://github.com/pingworks/dash/blob/master/scripts/repo/copy_artifact.sh
       title: Upload
 
     acceptance_test_stage:
-      url: http://test.com
+      url: http://jkmaster.local/jenkins/jobs/2-phonebook-acceptance-test-stage
       title: Acceptance Test Stage
-    deploy_scipt:
-      url: http://test.com
+    download_scipt:
+      url: https://github.com/pingworks/chef-ws_phonebook/blob/master/files/default/download_and_extract.sh
       title: Deployment Script
     test_env:
-      url: http://test.com
+      url: http://frontend.local:9292/
       title: Test Environment
 
     dash:
-      url: http://test.com
+      url: http://dash.local
       title: Dashboard
+    jenkins_build_flow:
+      url: https://wiki.jenkins-ci.org/display/JENKINS/Build+Flow+Plugin
+      title: Jenkins Build Flow Plugin
+    jenkins_workflow:
+      url: https://wiki.jenkins-ci.org/display/JENKINS/Workflow+Plugin
+      title: Jenkins Workflow Plugin
+    jenkins_trigger:
+      url: https://wiki.jenkins-ci.org/display/JENKINS/Parameterized+Trigger+Plugin
+      title: Jenkins Parameterized Trigger Plugin
+    jenkins_join:
+      url: https://wiki.jenkins-ci.org/display/JENKINS/Join+Plugin
+      title: Jenkins Join Plugin
 
     serverspec_doc:
       url: http://serverspec.org/resource_types.html
