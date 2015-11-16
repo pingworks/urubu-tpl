@@ -40,23 +40,20 @@ In this Workshop we focus on Chef and its tool ecosystem.
 <div class="row">
 <div class="col-md-6">
 
-<h2>Commitstage</h2>
+<h2>Heading</h2>
 
-The [1st Stage][commit_stage] aka [Commitstage][commit_stage] checks out the Sourcecode, [builds][example_script_build] the software and runs [Unittests][example_script_unittest] and Static Code Analysis. The result is a (set of) binary package(s) which will be deployed into a central [Binary Repository][binary_repo] (Principle: only build your binaries once). If and only if the commit stage has been successfull, it triggers the start of the acceptance test stage at the end (Principle: if any part of the pipeline fails, stop the line).
+Text
 
-[Commitstage][commit_stage]{: .btn .btn-xs .btn-default role=button }
-[Binary Repository][binary_repo]{: .btn .btn-xs .btn-default role=button }
+[Link][commit_stage]{: .btn .btn-xs .btn-default role=button }
 
 </div>
 <div class="col-md-6">
 
-<h2>Binary Repository</h2>
+<h2>Heading</h2>
 
-All Build Artifacts are collected [here][binary_repo]. We have chosen a very simple Binary Artifact Repo Solution: A [folder structure][binary_repo] on a ssh-accessible Server Instance with an Apache Web Server as [Frontend][binary_repo]. We created a set of Scripts to handle CRUD Operations on this [Binary Repo][binary_repo].
+Text.
 
-[Binary Repository][binary_repo]{: .btn .btn-xs .btn-default role=button }
-[Create New Folderstructure Script][binary_repo_create]{: .btn .btn-xs .btn-default role=button }
-[Upload Artifacts Script][binary_repo_upload]{: .btn .btn-xs .btn-default role=button }
+[Link][binary_repo]{: .btn .btn-xs .btn-default role=button }
 
 </div>
 </div>
@@ -64,14 +61,28 @@ All Build Artifacts are collected [here][binary_repo]. We have chosen a very sim
 <div class="row" markdown="1">
 <div class="col-md-6">
 
-<h2>Acceptance Test Stage</h2>
+<h2>Pipelines for Infrastructure</h2>
 
-All binaries are tested in depth during subsequent stages of the pipeline. In our example we have a [2nd Stage][acceptance_test_stage] aka [Acceptance Test Stage][acceptance_test_stage] running some Integration Tests on a deployed instance of the just-build application. Two things are important: Reuse the binaries you've built in the [Commitstage][commit_stage] (Principle: only build your binaries once) and - second - use universal Deployment Tooling to [download][download_scipt] and [install][example_script_install] the binaries on the [Test Environment][test_env] (Principle: deploy the same way to every environment).  
+Colaborative work on infrastructure code requires a comparable set of engineering practices as software development itself: Continuous Integration, TDD, etc. Using tools like [rubocop][rubocop] and [testkitchen][testkitchen] make it easy to setup a build and testpipeline for cookbooks. The [commit stage][iac_commit_stage] produces a reusable binary artifact and runs static code analysis using [rubocop][rubocop]. The [acceptance test stage][iac_acceptance_test_stage] runs [serverspec][serverspec] or [bats][bats] test to ensure that the infrastructure is working as expected.
 
-[Acceptance Test Stage][acceptance_test_stage]{: .btn .btn-xs .btn-default role=button }
-[Download Script][download_scipt]{: .btn .btn-xs .btn-default role=button }
-[Installer Script][example_script_install]{: .btn .btn-xs .btn-default role=button }
-[Test Environment][test_env]{: .btn .btn-xs .btn-default role=button }
+[Commit Stage][iac_commit_stage]{: .btn .btn-xs .btn-default role=button }
+[Acceptance Test Stage][iac_acceptance_test_stage]{: .btn .btn-xs .btn-default role=button }
+[Rubocop][rubocop]{: .btn .btn-xs .btn-default role=button }
+[Testkitchen][testkitchen]{: .btn .btn-xs .btn-default role=button }
+[Serverspec][serverspec]{: .btn .btn-xs .btn-default role=button }
+[Bats][bats]{: .btn .btn-xs .btn-default role=button }
+
+</div>
+<div class="col-md-6" markdown="1">
+
+<h2>Provisioning complex Environments</h2>
+
+If you try to describe a whole environment with tools like [Chef][chef_doc] you need a possibility to define server roles in that environment. An easy way to do this is to use the [environment cookbook pattern][env_cookbook_pattern]: Every recipe in an environment cookbook describes one role in an environment (e.g: [jkmaster][env_ws_pipeline_jkmaster]) and therefore combines functionality from several application cookbooks. The dependencies to the application cookbook are defined in the [metadata.rb][env_ws_pipeline_metadata] and all the versions are pinned there. Applying a fixed version of an environment cookbook (with all its pinned dependencies) to a set of virtual machines creates a certain, reproducible state of a whole environment.
+
+[Chef][chef_doc]{: .btn .btn-xs .btn-default role=button }
+[Environment Cookbook Pattern][env_cookbook_pattern]{: .btn .btn-xs .btn-default role=button }
+[Jkmaster Role][env_ws_pipeline_jkmaster]{: .btn .btn-xs .btn-default role=button }
+[Env Cookbook Metadata][env_ws_pipeline_metadata]{: .btn .btn-xs .btn-default role=button }
 
 </div>
 </div>

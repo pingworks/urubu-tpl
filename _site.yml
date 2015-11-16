@@ -96,6 +96,35 @@ reflinks:
       url: http://www.heise.de/developer/artikel/Eine-Einfuehrung-in-Continuous-Delivery-Teil-4-Bereitstellen-der-Infrastruktur-2529341.html
       title: Heise Developer - Infrastructure as Code
 
+    rubocop:
+      url: https://github.com/bbatsov/rubocop
+      title: Rubocop
+    testkitchen:
+      url: http://kitchen.ci/
+      title: Testkitchen
+    iac_commit_stage:
+      url: http://dash.local/jenkins/jobs/1-chefpwbase-commit-stage
+      title: IaC Commit Stage
+    iac_acceptance_test_stage:
+      url: http://dash.local/jenkins/jobs/2-chefpwbase-acceptance-test-stage
+      title: IaC Acceptance Test Stage
+    serverspec:
+      url: http://serverspec.org/resource_types.html
+      title: Serverspec Tests
+    bats:
+      url: https://github.com/sstephenson/bats
+      title: Bats Tests
+
+    env_cookbook_pattern:
+      url: http://blog.vialstudios.com/the-environment-cookbook-pattern/
+      title: Environment Cookbook Pattern
+    env_ws_pipeline_jkmaster:
+      url: https://github.com/pingworks/chef-env_ws_pipeline/blob/master/recipes/jkmaster.rb
+      title: Jkmaster role
+    env_ws_pipeline_metadata:
+      url: https://github.com/pingworks/chef-env_ws_pipeline/blob/master/metadata.rb
+      title: Env Cookbook Metadata
+
     serverspec_doc:
       url: http://serverspec.org/resource_types.html
       title: Serverspec Resource Types
