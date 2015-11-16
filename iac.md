@@ -11,33 +11,28 @@ title: IaC
 layout: colpage
 pager: false
 ---
-Part 1 - Continuous Delivery
+Part 2 - Infrastructure as Code
 {.lead}
 
 <div class="row" markdown="1">
 <div class="col-md-6">
 
-<h2>Example Application</h2>
+<h2>Infrastructure Development with Chef</h2>
 
-The Example Application is a simple but multitiered [Phonebook Web Application ][example_deployed] written in Ruby. We use simple scripts to [build][example_script_build], [unittest][example_script_unittest] and [install][example_script_install] the application.
+Infrastructure is the Runtime Environment of an (often distributed) Application. It consists of a set of interconnected machines, either physical or virtualized like KVM VMs or Docker Containers. The VM Creation Process from "Scratch" to "Deployed Application" can be seen as a three step process: Bootstrapping + Provisioning + App Deployment.
+During Bootstrapping a set of empty VMs are being created and the basic network setup is done. Bootstrapping is finished when all the boxes have a distinct hostnames and are accessible via ssh or similar.
+In the next phase this empty boxes will get provisioned with the "right" middleware to fulfill their role in the runtime environment for the later deployed app. Typical server roles are database host, a java based microservice container, a message queue instance etc.
+There are a handful of mature provisioning frameworks on the market: Chef, Puppet, Ansible, Salt Stack, etc.
+In this Workshop we concentrate on Chef and its tool ecosystem.  
 
-[App UI][example_deployed]{: .btn .btn-xs .btn-default role=button }
-[App Sourcecode][example_sourcecode]{: .btn .btn-xs .btn-default role=button }
-[Build Script][example_script_build]{: .btn .btn-xs .btn-default role=button }
-[Unittest Script][example_script_unittest]{: .btn .btn-xs .btn-default role=button }
-[Installer Script][example_script_install]{: .btn .btn-xs .btn-default role=button }
+[Chef Documentation][chef_doc]{: .btn .btn-xs .btn-default role=button }
 
 </div>
 <div class="col-md-6" markdown="1">
 
-<h2>Sourcecode Repository</h2>
+<h2>3 Phase VM Creation Process</h2>
 
-Continuous Delivery Pipelines are triggered by code changes pushed to a central [Sourcecode Repository][central_scm]. In our case we'll use a central Git Repository.
-A [Git-Hook-Script][central_scm_hookscript] triggers a pipeline run after each push (Principle: every change triggers the pipeline immediately).
-
-[Central Sourcecode Repo][central_scm]{: .btn .btn-xs .btn-default role=button }
-[Git-Hook-Script][central_scm_hookscript]{: .btn .btn-xs .btn-default role=button }
-[Git-Hook-Documentation][git_hook_docu]{: .btn .btn-xs .btn-default role=button }
+<img src="img/img1.png" class="img-thumbnail" />
 
 </div>
 </div>
