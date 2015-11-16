@@ -80,6 +80,22 @@ reflinks:
       url: https://wiki.jenkins-ci.org/display/JENKINS/Join+Plugin
       title: Jenkins Join Plugin
 
+    heise_developer:
+      url: http://www.heise.de/developer/
+      title: Heise Developer
+    heise_article1:
+      url: http://www.heise.de/developer/artikel/Eine-Einfuehrung-in-Continuous-Delivery-Teil-1-Grundlagen-2176380.html
+      title: Heise Developer - Continuous Delivery Principles
+    heise_article2:
+      url: http://www.heise.de/developer/artikel/Eine-Einfuehrung-in-Continuous-Delivery-Teil-2-Commit-Stage-2286071.html
+      title: Heise Developer - Commit Stage
+    heise_article3:
+      url: http://www.heise.de/developer/artikel/Eine-Einfuehrung-in-Continuous-Delivery-Teil-3-Acceptance-Test-Stage-2457023.html
+      title: Heise Developer - Acceptance Test Stage
+    heise_article4:
+      url: http://www.heise.de/developer/artikel/Eine-Einfuehrung-in-Continuous-Delivery-Teil-4-Bereitstellen-der-Infrastruktur-2529341.html
+      title: Heise Developer - Infrastructure as Code
+
     serverspec_doc:
       url: http://serverspec.org/resource_types.html
       title: Serverspec Resource Types

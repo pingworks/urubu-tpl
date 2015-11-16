@@ -94,3 +94,18 @@ To optimize the whole pipeline for throughput it is necessary to parallelize bui
 
 </div>
 </div>
+
+<div class="row" markdown="1">
+<div class="col-md-6">
+
+<h2>Heise Developer Series</h2>
+
+The authors have published a series of four articles about continuous delivery on [Heise Developer][heise_developer]. The [first article][heise_article1] will cover the [basics][heise_article1] of continuous delivery while the [second][heise_article2] one will elaborate on building up a [commit stage][heise_article2]. The [third articles][heise_article3] deals with setting up a basic [acceptance test stage][heise_article3] and the [fourth article][heise_article4] covers the basics of [Infrastructure as Code][heise_article4].
+
+[Heise: CD Principles][heise_article1]{: .btn .btn-xs .btn-default role=button }
+[Heise: Commit Stage][heise_article2]{: .btn .btn-xs .btn-default role=button }
+[Heise: Acceptance Test Stage][heise_article3]{: .btn .btn-xs .btn-default role=button }
+[Heise: Infrastructure as Code][heise_article4]{: .btn .btn-xs .btn-default role=button }
+
+</div>
+</div>
