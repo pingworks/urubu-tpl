@@ -1,16 +1,7 @@
 ---
-user: __user__
-user_firstname: __user_firstname__
-user_lastname: __user_lastname__
-user_company: __user_company__
-user_email: __user_email__
-wsappl_name: __wsappl_name__
-wsappl_doc_version: __wsappl_doc_version__
-
 title: Links
 layout: colpage
 pager: false
-
 ---
 
 Continuous Delivery
