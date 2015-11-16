@@ -1,10 +1,10 @@
-brand: CLC 2015 - Continuous Delivery & Infrastructure as Code
+brand: Workshop - Continuous Delivery & Infrastructure as Code
 
 baseurl: __user__
 bootswatch: null # flatly, yeti, lumen,...
 navbar_inverse: false
 bootstrap: 3.3.5
-navbar_right_items: 2
+navbar_right_items: 3
 
 reflinks:
     phonebook_demo:

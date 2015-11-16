@@ -7,23 +7,11 @@ user_email: __user_email__
 wsappl_name: __wsappl_name__
 wsappl_doc_version: __wsappl_doc_version__
 
-title: Start
-layout: home
+title: Links
+layout: colpage
 pager: false
-content:
-  - index
-  - links
-  - documentation
 
 ---
-Workshop Documentation
-{.lead}
-
-[Part 1 - Continuous Delivery][cd]{: .btn .btn-xs .btn-default role=button }
-
-[Part 2 - Infrastructure as Code][iac]{: .btn .btn-xs .btn-default role=button }
-
-[Part 3 - Environment Creation][envs]{: .btn .btn-xs .btn-default role=button }
 
 Continuous Delivery
 {.lead}
