@@ -25,8 +25,6 @@ In the next phase this empty boxes will get provisioned with the "right" middlew
 There are a handful of mature provisioning frameworks on the market: Chef, Puppet, Ansible, Salt Stack, etc.
 In this Workshop we focus on Chef and its tool ecosystem.  
 
-[Chef Documentation][chef_doc]{: .btn .btn-xs .btn-default role=button }
-
 </div>
 <div class="col-md-6" markdown="1">
 
@@ -40,11 +38,12 @@ In this Workshop we focus on Chef and its tool ecosystem.
 <div class="row">
 <div class="col-md-6">
 
-<h2>Heading</h2>
+<h2>Server Provisioning with Chef</h2>
 
-Text
+Chef aims to be a platform independent provisioning framework providing all tools needed for the vast majority of server provisioning and configuration tasks. The main building block in Chef is the "cookbook". A cookbook bundles all infrastructure code to setup, configure and manage a specific service on a given machine. The actual code is grouped into "recipes" (files) and consists of "resources" (dsl code blocks inside recipes) . Extended or customized cookbooks can be composed from existing cookbooks using a dependency management tool called "berkshelf". A large number of excellent community cookbooks can be found at the [Chef Supermarket][chef_supermarked].   
 
-[Link][commit_stage]{: .btn .btn-xs .btn-default role=button }
+[Chef Documentation][chef_doc]{: .btn .btn-xs .btn-default role=button }
+[Chef Supermarket][chef_supermarked]{: .btn .btn-xs .btn-default role=button }
 
 </div>
 <div class="col-md-6">

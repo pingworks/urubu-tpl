@@ -133,6 +133,10 @@ reflinks:
       url: https://docs.chef.io/
       title: Chef Documentation
 
+    chef_supermarked:
+      url: https://supermarket.chef.io/
+      title: Chef supermarket
+
     atom_serverspec:
       url: https://atom.io/packages/serverspec-snippets
       title: Atom Serverspec Snippets
