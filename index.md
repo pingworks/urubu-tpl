@@ -28,7 +28,7 @@ Infrastructure as Code
 
 [Chef Documentation][chef_doc]{: .btn .btn-xs .btn-default role=button }
 
-[Serverspec Resourcetypes][serverspec_doc]{: .btn .btn-xs .btn-default role=button }
+[Serverspec Resourcetypes][serverspec]{: .btn .btn-xs .btn-default role=button }
 
 [Atom Serverspec Snippets][atom_serverspec]{: .btn .btn-xs .btn-default role=button }
 

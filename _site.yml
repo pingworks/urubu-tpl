@@ -7,6 +7,22 @@ bootstrap: 3.3.5
 navbar_right_items: 3
 
 reflinks:
+    chef_doc:
+      url: https://docs.chef.io/
+      title: Chef Documentation
+
+    chef_supermarket:
+      url: https://supermarket.chef.io/
+      title: Chef supermarket
+
+    atom_serverspec:
+      url: https://atom.io/packages/serverspec-snippets
+      title: Atom Serverspec Snippets
+
+    example_redis_conf:
+      url: https://github.com/pingworks/ws-examples/blob/master/ws-examples/iac/redis.conf
+      title: redis.conf
+
     phonebook_demo:
         url: http://frontend.test01.demo.ws.net:9292
         title: Phonebook example app
@@ -99,6 +115,55 @@ reflinks:
       url: http://www.heise.de/developer/artikel/Eine-Einfuehrung-in-Continuous-Delivery-Teil-4-Bereitstellen-der-Infrastruktur-2529341.html
       title: Heise Developer - Infrastructure as Code
 
+
+    chef_intro:
+      url: https://www.chef.io/chef/
+      title: Chef
+
+    ansible_intro:
+      url: http://www.ansible.com/provisioning
+      title: Ansible
+
+    salt_intro:
+      url: http://saltstack.com
+      title: Saltstack
+
+    puppet_intro:
+      url: https://puppetlabs.com
+      title: Puppet
+
+    docker_intro:
+      url: https://www.docker.com
+      title: Docker
+
+    kvm_intro:
+      url: http://www.linux-kvm.org/page/Main_Page
+      title: KVM
+
+    berkshelf:
+      url: http://berkshelf.com
+      title: Berkshelf
+
+    tdd:
+      url: https://en.wikipedia.org/wiki/Test-driven_development
+      title: TDD
+
+    chef_cookbook:
+      url: https://docs.chef.io/cookbooks.html
+      title: Chef Cookbook
+
+    chef_resources:
+      url: https://docs.chef.io/resource.html
+      title: Chef Resource
+
+    chef_recipes:
+      url: https://docs.chef.io/recipes.html
+      title: Chef Recipe
+
+    dsl:
+      url: https://en.wikipedia.org/wiki/Domain-specific_language
+      title: DSL
+
     rubocop:
       url: https://github.com/bbatsov/rubocop
       title: Rubocop
@@ -127,23 +192,3 @@ reflinks:
     env_ws_pipeline_metadata:
       url: https://github.com/pingworks/chef-env_ws_pipeline/blob/master/metadata.rb
       title: Env Cookbook Metadata
-
-    serverspec_doc:
-      url: http://serverspec.org/resource_types.html
-      title: Serverspec Resource Types
-
-    chef_doc:
-      url: https://docs.chef.io/
-      title: Chef Documentation
-
-    chef_supermarked:
-      url: https://supermarket.chef.io/
-      title: Chef supermarket
-
-    atom_serverspec:
-      url: https://atom.io/packages/serverspec-snippets
-      title: Atom Serverspec Snippets
-
-    example_redis_conf:
-      url: https://github.com/pingworks/ws-examples/blob/master/ws-examples/iac/redis.conf
-      title: redis.conf

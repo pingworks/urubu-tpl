@@ -11,7 +11,7 @@ Part 3 - Environment Creation
 
 <h2>Pipelines for Infrastructure</h2>
 
-Colaborative work on infrastructure code requires a comparable set of engineering practices as software development itself: Continuous Integration, TDD, etc. Using tools like [rubocop][rubocop] and [testkitchen][testkitchen] make it easy to setup a build and testpipeline for cookbooks. The [commit stage][iac_commit_stage] produces a reusable binary artifact and runs static code analysis using [rubocop][rubocop]. The [acceptance test stage][iac_acceptance_test_stage] runs [serverspec][serverspec] or [bats][bats] test to ensure that the infrastructure is working as expected.
+Collaborative work on infrastructure code requires a comparable set of engineering practices as software development itself: Continuous Integration, TDD, etc. Using tools like [rubocop][rubocop] and [testkitchen][testkitchen] make it easy to setup a build and testpipeline for cookbooks. The [commit stage][iac_commit_stage] produces a reusable binary artifact and runs static code analysis using [rubocop][rubocop]. The [acceptance test stage][iac_acceptance_test_stage] runs [serverspec][serverspec] or [bats][bats] test to ensure that the infrastructure is working as expected.
 
 [Commit Stage][iac_commit_stage]{: .btn .btn-xs .btn-default role=button }
 [Acceptance Test Stage][iac_acceptance_test_stage]{: .btn .btn-xs .btn-default role=button }
