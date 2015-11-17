@@ -7,7 +7,7 @@ pager: false
 Continuous Delivery
 {.lead}
 
-[Phonebook exapmle app][phonebook_demo]{: .btn .btn-xs .btn-default role=button }
+[Phonebook Example App][phonebook_demo]{: .btn .btn-xs .btn-default role=button }
 
 [Pipeline Dashboard][dashboard]{: .btn .btn-xs .btn-default role=button }
 
