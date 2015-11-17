@@ -4,6 +4,8 @@ layout: colpage
 pager: false
 ---
 
+<h4>These Links are only available during the workshop!</h4> 
+
 Continuous Delivery
 {.lead}
 
