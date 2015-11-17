@@ -11,9 +11,8 @@ Part 1 - Continuous Delivery
 
 <h2>Example Application</h2>
 
-The Example Application is a simple but multitiered [Phonebook Web Application ][example_deployed] written in Ruby. We use simple scripts to [build][example_script_build], [unittest][example_script_unittest] and [install][example_script_install] the application.
+The Example Application is a simple but multitiered [Phonebook Web Application ][example_sourcecode] written in Ruby. We use simple scripts to [build][example_script_build], [unittest][example_script_unittest] and [install][example_script_install] the application.
 
-[App UI][example_deployed]{: .btn .btn-xs .btn-default role=button }
 [App Sourcecode][example_sourcecode]{: .btn .btn-xs .btn-default role=button }
 [Build Script][example_script_build]{: .btn .btn-xs .btn-default role=button }
 [Unittest Script][example_script_unittest]{: .btn .btn-xs .btn-default role=button }
@@ -63,12 +62,11 @@ All Build Artifacts are collected [here][binary_repo]. We have chosen a very sim
 
 <h2>Acceptance Test Stage</h2>
 
-All binaries are tested in depth during subsequent stages of the pipeline. In our example we have a [2nd Stage][acceptance_test_stage] aka [Acceptance Test Stage][acceptance_test_stage] running some Integration Tests on a deployed instance of the just-build application. Two things are important: Reuse the binaries you've built in the [Commitstage][commit_stage] (Principle: only build your binaries once) and - second - use universal Deployment Tooling to [download][download_scipt] and [install][example_script_install] the binaries on the [Test Environment][test_env] (Principle: deploy the same way to every environment).  
+All binaries are tested in depth during subsequent stages of the pipeline. In our example we have a [2nd Stage][acceptance_test_stage] aka [Acceptance Test Stage][acceptance_test_stage] running some Integration Tests on a deployed instance of the just-build application. Two things are important: Reuse the binaries you've built in the [Commitstage][commit_stage] (Principle: only build your binaries once) and - second - use universal Deployment Tooling to [download][download_scipt] and [install][example_script_install] the binaries on the Test Environment (Principle: deploy the same way to every environment).  
 
 [Acceptance Test Stage][acceptance_test_stage]{: .btn .btn-xs .btn-default role=button }
 [Download Script][download_scipt]{: .btn .btn-xs .btn-default role=button }
 [Installer Script][example_script_install]{: .btn .btn-xs .btn-default role=button }
-[Test Environment][test_env]{: .btn .btn-xs .btn-default role=button }
 
 </div>
 <div class="col-md-6" markdown="1">
@@ -79,6 +77,7 @@ Every commit triggers a pipeline run. That means a lot of feedback data gets pro
 To optimize the whole pipeline for throughput it is necessary to parallelize builds in all pipeline stages. Jenkins Plugins like: [Build Flow][jenkins_build_flow], [Workflow][jenkins_workflow] or [Parameterized Trigger][jenkins_trigger] and [Join][jenkins_join] (not recommended) can be used for that purpose.
 
 [Dashboard][dash]{: .btn .btn-xs .btn-default role=button }
+[Dashboard Sourcecode][dash_source]{: .btn .btn-xs .btn-default role=button }
 [Build Flow Plugin][jenkins_build_flow]{: .btn .btn-xs .btn-default role=button }
 [Workflow Plugin][jenkins_workflow]{: .btn .btn-xs .btn-default role=button }
 [Parameterized Trigger Plugin][jenkins_trigger]{: .btn .btn-xs .btn-default role=button }

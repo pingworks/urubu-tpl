@@ -41,7 +41,7 @@ reflinks:
       title: Documentation on git hook scripts
 
     commit_stage:
-      url: http://jkmaster.local/jenkins/jobs/1-phonebook-commit-stage
+      url: http://jkmaster.local/jenkins/job/1-phonebook-commit-stage
       title: Commitstage
 
     binary_repo:
@@ -55,7 +55,7 @@ reflinks:
       title: Upload
 
     acceptance_test_stage:
-      url: http://jkmaster.local/jenkins/jobs/2-phonebook-acceptance-test-stage
+      url: http://jkmaster.local/jenkins/job/2-phonebook-acceptance-test-stage
       title: Acceptance Test Stage
     download_scipt:
       url: https://github.com/pingworks/chef-ws_phonebook/blob/master/files/default/download_and_extract.sh
@@ -67,6 +67,9 @@ reflinks:
     dash:
       url: http://dash.local
       title: Dashboard
+    dash_source:
+      url: https://github.com/pingworks/dash
+      title: Dashboard Sourcecode
     jenkins_build_flow:
       url: https://wiki.jenkins-ci.org/display/JENKINS/Build+Flow+Plugin
       title: Jenkins Build Flow Plugin
@@ -103,10 +106,10 @@ reflinks:
       url: http://kitchen.ci/
       title: Testkitchen
     iac_commit_stage:
-      url: http://dash.local/jenkins/jobs/1-chefpwbase-commit-stage
+      url: http://dash.local/jenkins/job/1-chef-pw_base-commit-stage
       title: IaC Commit Stage
     iac_acceptance_test_stage:
-      url: http://dash.local/jenkins/jobs/2-chefpwbase-acceptance-test-stage
+      url: http://dash.local/jenkins/job/2-chef-pw_base-acceptance-test-stage
       title: IaC Acceptance Test Stage
     serverspec:
       url: http://serverspec.org/resource_types.html
