@@ -4,7 +4,7 @@ layout: colpage
 pager: false
 ---
 
-<h4>These Links are only available during the workshop!</h4> 
+<h4>These Links are only available during the workshop!</h4>
 
 Continuous Delivery
 {.lead}
@@ -13,16 +13,7 @@ Continuous Delivery
 
 [Pipeline Dashboard][dashboard]{: .btn .btn-xs .btn-default role=button }
 
-Infrastructure as Code
+Kubernetes Cluster
 {.lead}
 
-[Chef Documentation][chef_doc]{: .btn .btn-xs .btn-default role=button }
-
-[Serverspec Resourcetypes][serverspec]{: .btn .btn-xs .btn-default role=button }
-
-[Atom Serverspec Snippets][atom_serverspec]{: .btn .btn-xs .btn-default role=button }
-
-Code Examples
-{.lead}
-
-Example [redis.conf][example_redis_conf]
+[Kubernetes Dashboard][kubernetes_dashboard]{: .btn .btn-xs .btn-default role=button }

@@ -3,7 +3,7 @@ title: Continuous Delivery
 layout: colpage
 pager: true
 ---
-Part 1 - Continuous Delivery
+Part 2 - Docker based Continuous Delivery
 {.lead}
 
 <div class="row" markdown="1">
@@ -11,12 +11,12 @@ Part 1 - Continuous Delivery
 
 <h2>Example Application</h2>
 
-The Example Application is a simple but multitiered [Phonebook Web Application ][example_sourcecode] written in Ruby. We use simple scripts to [build][example_script_build], [unittest][example_script_unittest] and [install][example_script_install] the application.
+The Example Application is a simple but multitiered Phonebook Web Application [frontend][example_sourcecode_frontend], [backend][example_sourcecode_backend] written in Ruby. We use simple scripts to [build and test][example_script_buildtest] the application.
 
-[App Sourcecode][example_sourcecode]{: .btn .btn-xs .btn-default role=button }
-[Build Script][example_script_build]{: .btn .btn-xs .btn-default role=button }
-[Unittest Script][example_script_unittest]{: .btn .btn-xs .btn-default role=button }
-[Installer Script][example_script_install]{: .btn .btn-xs .btn-default role=button }
+[App Sourcecode Frontend][example_sourcecode_frontend]{: .btn .btn-xs .btn-default role=button }
+[App Sourcecode Frontend][example_sourcecode_backend]{: .btn .btn-xs .btn-default role=button }
+[Build Scripts][example_sourcecode_buildscripts]{: .btn .btn-xs .btn-default role=button }
+[Build & Test Script][example_script_buildtest]{: .btn .btn-xs .btn-default role=button }
 
 </div>
 <div class="col-md-6" markdown="1">
@@ -38,21 +38,21 @@ A [Git-Hook-Script][central_scm_hookscript] triggers a pipeline run after each p
 
 <h2>Commitstage</h2>
 
-The [1st Stage][commit_stage] aka [Commitstage][commit_stage] checks out the Sourcecode, [builds][example_script_build] the software and runs [Unittests][example_script_unittest] and Static Code Analysis. The result is a (set of) binary package(s) which will be deployed into a central [Binary Repository][binary_repo] (Principle: only build your binaries once). If and only if the commit stage has been successfull, it triggers the start of the acceptance test stage at the end (Principle: if any part of the pipeline fails, stop the line).
+The [1st Stage][commit_stage] aka [Commitstage][commit_stage] checks out the Sourcecode, [builds][example_script_buildtest] the software and runs Unittests and Static Code Analysis. The result is a debian binary package for frontend and backend which can then be build into a [docker image][dockerfile]. This will be pushed to a central [Docker registry][docker_registry] (Principle: only build your binaries once). If and only if the commit stage has been successfull, it triggers the start of the acceptance test stage at the end (Principle: if any part of the pipeline fails, stop the line).
 
 [Commitstage][commit_stage]{: .btn .btn-xs .btn-default role=button }
-[Binary Repository][binary_repo]{: .btn .btn-xs .btn-default role=button }
+[Dockerfile][dockerfile]{: .btn .btn-xs .btn-default role=button }
+[Docker registry][docker_registry]{: .btn .btn-xs .btn-default role=button }
 
 </div>
 <div class="col-md-6">
 
 <h2>Binary Repository</h2>
 
-All Build Artifacts are collected [here][binary_repo]. We have chosen a very simple Binary Artifact Repo Solution: A [folder structure][binary_repo] on a ssh-accessible Server Instance with an Apache Web Server as [Frontend][binary_repo]. We created a set of Scripts to handle CRUD Operations on this [Binary Repo][binary_repo].
+All Build Artifacts are collected [here][docker_registry]. This is a private Docker registry run in kubernetes and created with kubectrl based on this [project][kubernetes_registry].
 
-[Binary Repository][binary_repo]{: .btn .btn-xs .btn-default role=button }
-[Create New Folderstructure Script][binary_repo_create]{: .btn .btn-xs .btn-default role=button }
-[Upload Artifacts Script][binary_repo_upload]{: .btn .btn-xs .btn-default role=button }
+[Docker registry][docker_registry]{: .btn .btn-xs .btn-default role=button }
+[Kubernetes Registry][kubernetes_registry]{: .btn .btn-xs .btn-default role=button }
 
 </div>
 </div>
@@ -62,11 +62,10 @@ All Build Artifacts are collected [here][binary_repo]. We have chosen a very sim
 
 <h2>Acceptance Test Stage</h2>
 
-All binaries are tested in depth during subsequent stages of the pipeline. In our example we have a [2nd Stage][acceptance_test_stage] aka [Acceptance Test Stage][acceptance_test_stage] running some Integration Tests on a deployed instance of the just-build application. Two things are important: Reuse the binaries you've built in the [Commitstage][commit_stage] (Principle: only build your binaries once) and - second - use universal Deployment Tooling to [download][download_scipt] and [install][example_script_install] the binaries on the Test Environment (Principle: deploy the same way to every environment).  
+All docker images are tested in depth during subsequent stages of the pipeline. In our example we have a [2nd Stage][acceptance_test_stage] aka [Acceptance Test Stage][acceptance_test_stage] running some Integration Tests on a deployed instance of the just-build application. Two things are important: Reuse the docker image you've built in the [Commitstage][commit_stage] (Principle: only build your binaries once) and - second - use universal [Deployment Tooling][deployment_script] to deploy the image to the cluster environment. (Principle: deploy the same way to every environment).  
 
 [Acceptance Test Stage][acceptance_test_stage]{: .btn .btn-xs .btn-default role=button }
-[Download Script][download_scipt]{: .btn .btn-xs .btn-default role=button }
-[Installer Script][example_script_install]{: .btn .btn-xs .btn-default role=button }
+[Deployment Script][deployment_script]{: .btn .btn-xs .btn-default role=button }
 
 </div>
 <div class="col-md-6" markdown="1">
@@ -74,14 +73,10 @@ All binaries are tested in depth during subsequent stages of the pipeline. In ou
 <h2>Dashboard and parallelizing builds</h2>
 
 Every commit triggers a pipeline run. That means a lot of feedback data gets produced (imagine 3 teams, 7 developers each, committing 2 times per hour -> 50 builds/h). A Dashboard helps spotting potential test failures and the corresponding pipeline jobs. It can also be used to implement a simple 'one button push' deployment to test environments.
-To optimize the whole pipeline for throughput it is necessary to parallelize builds in all pipeline stages. Jenkins Plugins like: [Build Flow][jenkins_build_flow], [Workflow][jenkins_workflow] or [Parameterized Trigger][jenkins_trigger] and [Join][jenkins_join] (not recommended) can be used for that purpose.
+To optimize the whole pipeline for throughput it is necessary to parallelize builds in all pipeline stages. The Jenkins [Pipeline Plugin][jenkins_pipeline] can be used for that purpose. For visualization the new [blue ocean ui][jenkins_blueocean] can be used.
 
-[Dashboard][dash]{: .btn .btn-xs .btn-default role=button }
-[Dashboard Sourcecode][dash_source]{: .btn .btn-xs .btn-default role=button }
-[Build Flow Plugin][jenkins_build_flow]{: .btn .btn-xs .btn-default role=button }
-[Workflow Plugin][jenkins_workflow]{: .btn .btn-xs .btn-default role=button }
-[Parameterized Trigger Plugin][jenkins_trigger]{: .btn .btn-xs .btn-default role=button }
-[Join Plugin][jenkins_join]{: .btn .btn-xs .btn-default role=button }
+[Pipeline Plugin][jenkins_pipeline]{: .btn .btn-xs .btn-default role=button }
+[Blueocean UI][jenkins_blueocean]{: .btn .btn-xs .btn-default role=button }
 
 </div>
 </div>

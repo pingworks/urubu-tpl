@@ -1,4 +1,4 @@
-brand: Workshop - Continuous Delivery & Infrastructure as Code
+brand: Workshop - Docker based Continuous Delivery Pipelines
 
 baseurl: __user__
 bootswatch: null # flatly, yeti, lumen,...
@@ -7,50 +7,37 @@ bootstrap: 3.3.5
 navbar_right_items: 3
 
 reflinks:
-    chef_doc:
-      url: https://docs.chef.io/
-      title: Chef Documentation
-
-    chef_supermarket:
-      url: https://supermarket.chef.io/
-      title: Chef supermarket
-
-    atom_serverspec:
-      url: https://atom.io/packages/serverspec-snippets
-      title: Atom Serverspec Snippets
-
-    example_redis_conf:
-      url: https://github.com/pingworks/ws-examples/blob/master/ws-examples/iac/redis.conf
-      title: redis.conf
-
     phonebook_demo:
-        url: http://frontend.test01.demo.ws.net:9292
+        url: http://phonebook-frontend.demo.svc.cluster.local/
         title: Phonebook example app
     dashboard:
-      url: http://dash.__user__.ws.net/
+      url: http://jenkins.__user__.svc.cluster.local/blue/
       title: Pipeline Dashboard
+    kubernetes_dashboard:
+      url: http://kubernetes.default.svc.cluster.local/ui/
+      title: Kubernetes Dashboard
 
     example_deployed:
-      url: http://frontend.demo.ws.net:9292/
+      url: http://phonebook-frontend.demo.svc.cluster.local/
       title: Phonebook WebApp
-    example_sourcecode:
-      url: https://github.com/pingworks/phonebook
-      title: Sourcecode
-    example_script_install:
-      url: https://github.com/pingworks/phonebook/blob/master/install.sh
-      title: Installer
-    example_script_build:
-      url: https://github.com/pingworks/phonebook/blob/master/build.sh
-      title: Build Script
-    example_script_unittest:
-      url: https://github.com/pingworks/phonebook/blob/master/unittest.sh
-      title: Unittest Script
+    example_sourcecode_frontend:
+      url: https://github.com/pingworks/phonebook-frontend
+      title: Sourcecode Frontend
+    example_sourcecode_backend:
+      url: https://github.com/pingworks/phonebook-backend
+      title: Sourcecode Backend
+    example_sourcecode_buildscripts:
+      url: https://github.com/pingworks/phonebook-backend
+      title: Sourcecode Buildscripts
+    example_script_buildtest:
+      url: https://github.com/pingworks/phonebook-buildscripts/blob/master/build-and-test.sh
+      title: Build and Test Script
 
     central_scm:
-      url: http://git.local/gitweb/
+      url: http://gitlab.infra.svc.cluster.local/gitweb/
       title: Central Sourcecode Repository
     central_scm_hookscript:
-      url: https://github.com/pingworks/chef-pw_git_repo/blob/master/templates/default/post-receive-hook.erb
+      url: https://github.com/pingworks/jenkinshooks/blob/master/post-receive.erb
       title: Git Hook Script
     git_hook_docu:
       url: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
@@ -60,44 +47,32 @@ reflinks:
       url: http://jkmaster.local/jenkins/job/1-phonebook-commit-stage
       title: Commitstage
 
-    binary_repo:
-      url: http://repo.local/repo/
-      title: Binary Repo
-    binary_repo_create:
-      url: https://github.com/pingworks/dash/blob/master/scripts/repo/start_pipeline_build.sh
-      title: Create New Folderstructure
-    binary_repo_upload:
-      url: https://github.com/pingworks/dash/blob/master/scripts/repo/copy_artifact.sh
-      title: Upload
+    docker_registry:
+      url: https://kube-registry.kube-system.svc.cluster.local:5000/
+      title: Docker Registry
+    dockerfile:
+      url: https://github.com/pingworks/phonebook-frontend/blob/master/Dockerfile
+      title: Dockerfile
+    kubernetes_registry:
+      url: https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/registry
+      title: Kubernetes Registry
 
     acceptance_test_stage:
       url: http://jkmaster.local/jenkins/job/2-phonebook-acceptance-test-stage
       title: Acceptance Test Stage
-    download_scipt:
-      url: https://github.com/pingworks/chef-ws_phonebook/blob/master/files/default/download_and_extract.sh
+    deployment_script:
+      url: https://github.com/pingworks/phonebook-buildscripts/blob/master/deploy-phonebook.sh
       title: Deployment Script
     test_env:
       url: http://frontend.local:9292/
       title: Test Environment
 
-    dash:
-      url: http://dash.local
-      title: Dashboard
-    dash_source:
-      url: https://github.com/pingworks/dash
-      title: Dashboard Sourcecode
-    jenkins_build_flow:
-      url: https://wiki.jenkins-ci.org/display/JENKINS/Build+Flow+Plugin
-      title: Jenkins Build Flow Plugin
-    jenkins_workflow:
-      url: https://wiki.jenkins-ci.org/display/JENKINS/Workflow+Plugin
-      title: Jenkins Workflow Plugin
-    jenkins_trigger:
-      url: https://wiki.jenkins-ci.org/display/JENKINS/Parameterized+Trigger+Plugin
-      title: Jenkins Parameterized Trigger Plugin
-    jenkins_join:
-      url: https://wiki.jenkins-ci.org/display/JENKINS/Join+Plugin
-      title: Jenkins Join Plugin
+    jenkins_blueocean:
+      url: https://jenkins.io/projects/blueocean/
+      title: Jenkins Blueocean UI
+    jenkins_pipeline:
+      url: https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+Plugin
+      title: Jenkins Pipeline Plugin
 
     heise_developer:
       url: http://www.heise.de/developer/
@@ -114,81 +89,3 @@ reflinks:
     heise_article4:
       url: http://www.heise.de/developer/artikel/Eine-Einfuehrung-in-Continuous-Delivery-Teil-4-Bereitstellen-der-Infrastruktur-2529341.html
       title: Heise Developer - Infrastructure as Code
-
-
-    chef_intro:
-      url: https://www.chef.io/chef/
-      title: Chef
-
-    ansible_intro:
-      url: http://www.ansible.com/provisioning
-      title: Ansible
-
-    salt_intro:
-      url: http://saltstack.com
-      title: Saltstack
-
-    puppet_intro:
-      url: https://puppetlabs.com
-      title: Puppet
-
-    docker_intro:
-      url: https://www.docker.com
-      title: Docker
-
-    kvm_intro:
-      url: http://www.linux-kvm.org/page/Main_Page
-      title: KVM
-
-    berkshelf:
-      url: http://berkshelf.com
-      title: Berkshelf
-
-    tdd:
-      url: https://en.wikipedia.org/wiki/Test-driven_development
-      title: TDD
-
-    chef_cookbook:
-      url: https://docs.chef.io/cookbooks.html
-      title: Chef Cookbook
-
-    chef_resources:
-      url: https://docs.chef.io/resource.html
-      title: Chef Resource
-
-    chef_recipes:
-      url: https://docs.chef.io/recipes.html
-      title: Chef Recipe
-
-    dsl:
-      url: https://en.wikipedia.org/wiki/Domain-specific_language
-      title: DSL
-
-    rubocop:
-      url: https://github.com/bbatsov/rubocop
-      title: Rubocop
-    testkitchen:
-      url: http://kitchen.ci/
-      title: Testkitchen
-    iac_commit_stage:
-      url: http://dash.local/jenkins/job/1-chef-pw_base-commit-stage
-      title: IaC Commit Stage
-    iac_acceptance_test_stage:
-      url: http://dash.local/jenkins/job/2-chef-pw_base-acceptance-test-stage
-      title: IaC Acceptance Test Stage
-    serverspec:
-      url: http://serverspec.org/resource_types.html
-      title: Serverspec Tests
-    bats:
-      url: https://github.com/sstephenson/bats
-      title: Bats Tests
-
-    env_cookbook_pattern:
-      url: http://blog.vialstudios.com/the-environment-cookbook-pattern/
-      title: Environment Cookbook Pattern
-    env_ws_pipeline_jkmaster:
-      url: https://github.com/pingworks/chef-env_ws_pipeline/blob/master/recipes/jkmaster.rb
-      title: Jkmaster role
-    env_ws_pipeline_metadata:
-      url: https://github.com/pingworks/chef-env_ws_pipeline/blob/master/metadata.rb
-      title: Env Cookbook Metadata
