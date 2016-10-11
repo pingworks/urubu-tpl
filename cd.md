@@ -38,9 +38,9 @@ A [Git-Hook-Script][central_scm_hookscript] triggers a pipeline run after each p
 
 <h2>Commitstage</h2>
 
-The [1st Stage][commit_stage] aka [Commitstage][commit_stage] checks out the Sourcecode, [builds][example_script_buildtest] the software and runs Unittests and Static Code Analysis. The result is a debian binary package for frontend and backend which can then be build into a [docker image][dockerfile]. This will be pushed to a central [Docker registry][docker_registry] (Principle: only build your binaries once). If and only if the commit stage has been successfull, it triggers the start of the acceptance test stage at the end (Principle: if any part of the pipeline fails, stop the line).
+The [1st Stage][jenkins_pipeline] aka [Commitstage][jenkins_pipeline] checks out the Sourcecode, [builds][example_script_buildtest] the software and runs Unittests and Static Code Analysis. The result is a debian binary package for frontend and backend which can then be build into a [docker image][dockerfile]. This will be pushed to a central [Docker registry][docker_registry] (Principle: only build your binaries once). If and only if the commit stage has been successfull, it triggers the start of the acceptance test stage at the end (Principle: if any part of the pipeline fails, stop the line).
 
-[Commitstage][commit_stage]{: .btn .btn-xs .btn-default role=button }
+[Jenkins Pipeline][jenkins_pipeline]{: .btn .btn-xs .btn-default role=button }
 [Dockerfile][dockerfile]{: .btn .btn-xs .btn-default role=button }
 [Docker registry][docker_registry]{: .btn .btn-xs .btn-default role=button }
 
@@ -62,9 +62,9 @@ All Build Artifacts are collected [here][docker_registry]. This is a private Doc
 
 <h2>Acceptance Test Stage</h2>
 
-All docker images are tested in depth during subsequent stages of the pipeline. In our example we have a [2nd Stage][acceptance_test_stage] aka [Acceptance Test Stage][acceptance_test_stage] running some Integration Tests on a deployed instance of the just-build application. Two things are important: Reuse the docker image you've built in the [Commitstage][commit_stage] (Principle: only build your binaries once) and - second - use universal [Deployment Tooling][deployment_script] to deploy the image to the cluster environment. (Principle: deploy the same way to every environment).  
+All docker images are tested in depth during subsequent stages of the pipeline. In our example we have a [2nd Stage][jenkins_pipeline] aka [Acceptance Test Stage][jenkins_pipeline] running some Integration Tests on a deployed instance of the just-build application. Two things are important: Reuse the docker image you've built in the [Commitstage][jenkins_pipeline] (Principle: only build your binaries once) and - second - use universal [Deployment Tooling][deployment_script] to deploy the image to the cluster environment. (Principle: deploy the same way to every environment).  
 
-[Acceptance Test Stage][acceptance_test_stage]{: .btn .btn-xs .btn-default role=button }
+[Acceptance Test Stage][jenkins_pipeline]{: .btn .btn-xs .btn-default role=button }
 [Deployment Script][deployment_script]{: .btn .btn-xs .btn-default role=button }
 
 </div>
@@ -73,9 +73,9 @@ All docker images are tested in depth during subsequent stages of the pipeline. 
 <h2>Dashboard and parallelizing builds</h2>
 
 Every commit triggers a pipeline run. That means a lot of feedback data gets produced (imagine 3 teams, 7 developers each, committing 2 times per hour -> 50 builds/h). A Dashboard helps spotting potential test failures and the corresponding pipeline jobs. It can also be used to implement a simple 'one button push' deployment to test environments.
-To optimize the whole pipeline for throughput it is necessary to parallelize builds in all pipeline stages. The Jenkins [Pipeline Plugin][jenkins_pipeline] can be used for that purpose. For visualization the new [blue ocean ui][jenkins_blueocean] can be used.
+To optimize the whole pipeline for throughput it is necessary to parallelize builds in all pipeline stages. The Jenkins [Pipeline Plugin][jenkins_pipeline_plugin] can be used for that purpose. For visualization the new [blue ocean ui][jenkins_blueocean] can be used.
 
-[Pipeline Plugin][jenkins_pipeline]{: .btn .btn-xs .btn-default role=button }
+[Pipeline Plugin][jenkins_pipeline_plugin]{: .btn .btn-xs .btn-default role=button }
 [Blueocean UI][jenkins_blueocean]{: .btn .btn-xs .btn-default role=button }
 
 </div>

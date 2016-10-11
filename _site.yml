@@ -8,8 +8,11 @@ navbar_right_items: 3
 
 reflinks:
     phonebook_demo:
-        url: http://phonebook-frontend.demo.svc.cluster.local/
+        url: http://phonebook-frontend.prod.svc.cluster.local/
         title: Phonebook example app
+    jenkins:
+      url: http://jenkins.__user__.svc.cluster.local/
+      title: Jenkins
     dashboard:
       url: http://jenkins.__user__.svc.cluster.local/blue/
       title: Pipeline Dashboard
@@ -18,7 +21,7 @@ reflinks:
       title: Kubernetes Dashboard
 
     example_deployed:
-      url: http://phonebook-frontend.demo.svc.cluster.local/
+      url: http://phonebook-frontend.prod.svc.cluster.local/
       title: Phonebook WebApp
     example_sourcecode_frontend:
       url: https://github.com/pingworks/phonebook-frontend
@@ -27,7 +30,7 @@ reflinks:
       url: https://github.com/pingworks/phonebook-backend
       title: Sourcecode Backend
     example_sourcecode_buildscripts:
-      url: https://github.com/pingworks/phonebook-backend
+      url: https://github.com/pingworks/phonebook-buildscripts
       title: Sourcecode Buildscripts
     example_script_buildtest:
       url: https://github.com/pingworks/phonebook-buildscripts/blob/master/build-and-test.sh
@@ -43,9 +46,9 @@ reflinks:
       url: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
       title: Documentation on git hook scripts
 
-    commit_stage:
-      url: http://jkmaster.local/jenkins/job/1-phonebook-commit-stage
-      title: Commitstage
+    jenkins_pipeline:
+      url: http://jenkins.__name__.svc.cluster.local/job/backend-final
+      title: Backend Pipeline
 
     docker_registry:
       url: https://kube-registry.kube-system.svc.cluster.local:5000/
@@ -57,9 +60,6 @@ reflinks:
       url: https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/registry
       title: Kubernetes Registry
 
-    acceptance_test_stage:
-      url: http://jkmaster.local/jenkins/job/2-phonebook-acceptance-test-stage
-      title: Acceptance Test Stage
     deployment_script:
       url: https://github.com/pingworks/phonebook-buildscripts/blob/master/deploy-phonebook.sh
       title: Deployment Script
@@ -70,7 +70,7 @@ reflinks:
     jenkins_blueocean:
       url: https://jenkins.io/projects/blueocean/
       title: Jenkins Blueocean UI
-    jenkins_pipeline:
+    jenkins_pipeline_plugin:
       url: https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+Plugin
       title: Jenkins Pipeline Plugin
 
@@ -89,3 +89,25 @@ reflinks:
     heise_article4:
       url: http://www.heise.de/developer/artikel/Eine-Einfuehrung-in-Continuous-Delivery-Teil-4-Bereitstellen-der-Infrastruktur-2529341.html
       title: Heise Developer - Infrastructure as Code
+
+    dockerio:
+      url: https://docker.io/
+      title: Docker
+    docker_docs:
+      url: https://docs.docker.com/
+      title: Docker Documentation
+    docker_swarm:
+      url: https://docs.docker.com/engine/swarm/
+      title: Docker Swarm
+    aws:
+      url: https://aws.amazon.com/
+      title: Amazon Web Services
+    gcp:
+      url: https://cloud.google.com/
+      title: Google Cloud Platform
+    openstack:
+      url: https://openstack.org
+      title: Openstack
+    kubernetes:
+      url: http://kubernetes.io
+      title: Kubernetes

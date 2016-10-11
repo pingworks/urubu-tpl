@@ -11,6 +11,8 @@ Continuous Delivery
 
 [Phonebook Example App][phonebook_demo]{: .btn .btn-xs .btn-default role=button }
 
+[Jenkins][jenkins]{: .btn .btn-xs .btn-default role=button }
+
 [Pipeline Dashboard][dashboard]{: .btn .btn-xs .btn-default role=button }
 
 Kubernetes Cluster

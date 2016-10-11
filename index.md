@@ -10,9 +10,9 @@ content:
 Workshop Documentation
 {.lead}
 
-[Part 1 - Softwaredelivery mit Docker][docker]{: .btn .btn-xs .btn-default role=button }
+[Part 1 - Software Delivery using Docker][docker]{: .btn .btn-xs .btn-default role=button }
 
-[Part 2 - Continuous Delivery mit Docker][cd]{: .btn .btn-xs .btn-default role=button }
+[Part 2 - Continuous Delivery using Docker][cd]{: .btn .btn-xs .btn-default role=button }
 
 Continuous Delivery
 {.lead}
