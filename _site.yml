@@ -37,7 +37,7 @@ reflinks:
       title: Build and Test Script
 
     central_scm:
-      url: http://gitlab.infra.svc.cluster.local/gitweb/
+      url: http://gitlab.infra.svc.cluster.local/
       title: Central Sourcecode Repository
     central_scm_hookscript:
       url: https://github.com/pingworks/jenkinshooks/blob/master/post-receive.erb

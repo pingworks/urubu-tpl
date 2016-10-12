@@ -15,6 +15,8 @@ Continuous Delivery
 
 [Pipeline Dashboard][dashboard]{: .btn .btn-xs .btn-default role=button }
 
+[Sourcecode Repo][central_scm]{: .btn .btn-xs .btn-default role=button }
+
 Kubernetes Cluster
 {.lead}
 
