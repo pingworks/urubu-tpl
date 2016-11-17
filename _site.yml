@@ -20,6 +20,9 @@ reflinks:
       url: https://kubernetes.default.svc.cluster.local/ui/
       title: Kubernetes Dashboard
 
+    example_jenkins:
+      url: http://jenkins.pingworks.svc.cluster.local/
+      title: Jenkins pingworks
     example_deployed:
       url: http://phonebook-frontend.prod.svc.cluster.local/
       title: Phonebook WebApp

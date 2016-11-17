@@ -20,3 +20,5 @@ Continuous Delivery
 [Phonebook exapmle app][phonebook_demo]{: .btn .btn-xs .btn-default role=button }
 
 [Pipeline Dashboard][dashboard]{: .btn .btn-xs .btn-default role=button }
+
+Jenkins Trigger Authentication Token: a12fde257cad123929237
