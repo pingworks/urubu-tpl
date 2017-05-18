@@ -20,6 +20,4 @@ Continuous Delivery
 Kubernetes Cluster
 {.lead}
 
-[Kubernetes Dashboard][kubernetes_dashboard]{: .btn .btn-xs .btn-default role=button }
-
 [Jenkins pingworks][example_jenkins]{: .btn .btn-xs .btn-default role=button }
