@@ -8,23 +8,23 @@ navbar_right_items: 3
 
 reflinks:
     phonebook_demo:
-        url: http://phonebook-frontend.prod.svc.cluster.local/
+        url: http://phonebook-frontend.prod.svc.k8s.ws.p7-s.net/
         title: Phonebook example app
     jenkins:
-      url: http://jenkins.__user__.svc.cluster.local/
+      url: http://jenkins.__user__.svc.k8s.ws.p7-s.net/
       title: Jenkins
     dashboard:
-      url: http://jenkins.__user__.svc.cluster.local/blue/
+      url: http://jenkins.__user__.svc.k8s.ws.p7-s.net/blue/
       title: Pipeline Dashboard
     kubernetes_dashboard:
-      url: https://kubernetes.default.svc.cluster.local/ui/
+      url: https://kubernetes.default.svc.k8s.ws.p7-s.net/ui/
       title: Kubernetes Dashboard
 
     example_jenkins:
-      url: http://jenkins.pingworks.svc.cluster.local/
+      url: http://jenkins.pingworks.svc.k8s.ws.p7-s.net/
       title: Jenkins pingworks
     example_deployed:
-      url: http://phonebook-frontend.prod.svc.cluster.local/
+      url: http://phonebook-frontend.prod.svc.k8s.ws.p7-s.net/
       title: Phonebook WebApp
     example_sourcecode_frontend:
       url: https://github.com/pingworks/phonebook-frontend
@@ -40,7 +40,7 @@ reflinks:
       title: Build and Test Script
 
     central_scm:
-      url: http://gitlab.infra.svc.cluster.local/
+      url: http://gitlab.infra.svc.k8s.ws.p7-s.net/
       title: Central Sourcecode Repository
     central_scm_hookscript:
       url: https://github.com/pingworks/jenkinshooks/blob/master/post-receive.erb
@@ -50,11 +50,11 @@ reflinks:
       title: Documentation on git hook scripts
 
     jenkins_pipeline:
-      url: http://jenkins.__name__.svc.cluster.local/job/backend-final
+      url: http://jenkins.__name__.svc.k8s.ws.p7-s.net/job/backend-final
       title: Backend Pipeline
 
     docker_registry:
-      url: https://kube-registry.kube-system.svc.cluster.local:5000/
+      url: https://kube-registry.kube-system.svc.k8s.ws.p7-s.net:5000/
       title: Docker Registry
     dockerfile:
       url: https://github.com/pingworks/phonebook-frontend/blob/master/Dockerfile
